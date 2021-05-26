@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../UI/Card";
+import Button from "../UI/Button"
 import './AddUser.css'
 
 export default function AddUser() {
@@ -15,7 +16,7 @@ export default function AddUser() {
                 <input type="text" name="name" id="name" />
                 <label htmlFor="age">Name</label>
                 <input type="number" name="age" id="age" />
-                <button type="submit">Add User</button>
+                <Button/>
             </form>
         </Card>
     );
