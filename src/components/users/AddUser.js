@@ -3,7 +3,7 @@ import Card from "../UI/Card";
 import Button from "../UI/Button";
 import "./AddUser.css";
 
-export default function AddUser() {
+export default function AddUser({onAddUser}) {
     const [username, setUsername] = useState("");
     const [age, setAge] = useState("");
 
@@ -12,7 +12,7 @@ export default function AddUser() {
         if (username === "" || age === "") {
             console.log("not valid");
         } else {
-            console.log(`${username} ${age}`);
+            onAddUser(username, age);
             setUsername("");
             setAge("");
         }
@@ -37,7 +37,7 @@ export default function AddUser() {
                     onChange={handleInputchange}
                     value={username}
                 />
-                <label htmlFor="age">Name</label>
+                <label htmlFor="age">Age</label>
                 <input
                     type="number"
                     name="age"
@@ -45,7 +45,7 @@ export default function AddUser() {
                     onChange={handleInputchange}
                     value={age}
                 />
-                <Button type="submit" handleClick={handleSubmit}>
+                <Button btnType="submit" handleClick={handleSubmit}>
                     Add User
                 </Button>
             </form>
