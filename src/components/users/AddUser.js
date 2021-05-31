@@ -40,7 +40,7 @@ export default function AddUser({ onAddUser }) {
 
     return (
         <div>
-            {showModal === true ? handleShowModal() : null};
+            {showModal && handleShowModal()};
             <Card className="input">
                 <form>
                     <label htmlFor="name">Name</label>

@@ -6,7 +6,7 @@ import "./ErrorModal.css"
 export default function ErrorModal({header, body, onModalBtnClick}) {
     return (
         <div>
-            <div className='backdrop'></div>
+            <div className='backdrop' onClick={onModalBtnClick}></div>
             <Card className='modal'>
                 <header className='header'>
                     <h2>{header}</h2>
